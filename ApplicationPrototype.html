@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<!-- div for color and sound - hide and show different elements - jquery for animations 
+place logo in seperate div with unique id - css for spacing
+css media call back - screen size scaleability-->
+
+<!-- <h3>Application Prototype</h3>
+
+TESTING RANGES
+<input type="range" id="myRange" value="100">
+
+<button onclick="myFunction()">apply</button>
+
+<p id="volume"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myRange").value;
+    document.getElementById("volume").innerHTML = x;
+}
+</script>
+ -->
+
+<body background="HYPERSCANbackground.jpg">
+
+<br/>
+<br/>
+
+<img src="HYPERSCANlogo.png" height="32" width="42">
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<img src="SOUNDtext.png" height="18" width="47">
+
+ Rounded switch 
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<label class="switch">
+  <input type="checkbox" checked onchange="checktest(this)">
+  <span class="slider round"></span>
+</label>
+
+<script type="text/javascript">
+	
+	function checktest (e){
+
+		console.log(e.checked)
+
+	}
+</script>
+</body>
+</html> -->
+
+<!-- NAVIGATION MENU -->
+<!-- <nav>
+  <ul>
+    <li><a href="Color.html">Color</a></li>
+  </ul>
+</nav>
+ -->
+
+<br/>
+<br/>
+
+<div id="volumeBlock"></div>
+
+<section id="sound">
+<!-- <h1>Sound range</h1> -->
+
+<!-- TRACK 1 -->
+<audio id="song">
+    <source src="Blackbear - i miss the old u.mp3" type="audio/mpeg">
+</audio>
+ <div> 
+  <button onclick="document.getElementById('song').play()">Play</button> 
+  <button onclick="document.getElementById('song').pause()">Pause</button> 
+</div>
+<input id="vol-control" 
+	   type="range" 
+	   min="0" 
+	   max="100" 
+	   step="1" 
+	   oninput="SetVolume(this.value)" 
+	   onchange="SetVolume(this.value)">
+</input>
+
+<!-- TRACK 2 -->
+<audio id="song2">
+    <source src="Hippie Sabotage - otherside.mp3" type="audio/mpeg">
+</audio>
+ <div> 
+  <button onclick="document.getElementById('song2').play()">Play</button> 
+  <button onclick="document.getElementById('song2').pause()">Pause</button> 
+</div>
+<input id="vol-control" 
+	   type="range" 
+	   min="0" 
+	   max="100" 
+	   step="1" 
+	   oninput="SetVolume2(this.value)" 
+	   onchange="SetVolume2(this.value)">
+</input>
+
+<!-- TRACK 3 -->
+<audio id="song3">
+    <source src="Felix Cartal - Drifting Away (ft. Ofelia K).mp3" type="audio/mpeg">
+</audio>
+ <div> 
+  <button onclick="document.getElementById('song3').play()">Play</button> 
+  <button onclick="document.getElementById('song3').pause()">Pause</button> 
+</div>
+<input id="vol-control" 
+	   type="range" 
+	   min="0" 
+	   max="100" 
+	   step="1" 
+	   oninput="SetVolume3(this.value)" 
+	   onchange="SetVolume3(this.value)">
+</input>
+
+<!-- TRACK 4 -->
+<audio id="song4">
+    <source src="Ekali - Unfaith.mp3" type="audio/mpeg">
+</audio>
+ <div> 
+  <button onclick="document.getElementById('song4').play()">Play</button> 
+  <button onclick="document.getElementById('song4').pause()">Pause</button> 
+</div>
+<input id="vol-control" 
+	   type="range" 
+	   min="0" 
+	   max="100" 
+	   step="1" 
+	   oninput="SetVolume4(this.value)" 
+	   onchange="SetVolume4(this.value)">
+</input>
+
+<!-- JAVASCRIPT LINKS -->
+ <script src="volume.js"></script>
+ <script src="volume2.js"></script>
+ <script src="volume3.js"></script>
+ <script src="volume4.js"></script>
+
+
+ <head>
+  <meta charset="UTF-8">
+  <title>HSL color picker</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+  <link rel="stylesheet" href="ColorPicker.css">
+</head>
+
+<br/>
+
+
+ <form action="ApplicationPrototype.html">
+  <input type="image" src="toSOUNDlit.png" alt="SoundOn" width="40" height="33"> 
+
+<form action2="Color.html"">
+  <input type="image" src="toCOLOR.png" alt="Color" width="48" height="23">
+
+
+<!-- TESTING SOUND
+<audio controls>
+  <source src="Blackbear - i miss the old u.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> -->
+
+<!-- TESTING BACKGROUND COLORS
+<body style="background-color: sample;" -->
+
+
+<!-- HSL SLIDERS -->
+<!-- <section id="picker">
+  <h1>HSL range</h1>
+  <input type="range" min="0" step="0.1" max="360" id="hsl-h">
+  <input type="range" min="0" step="0.1" max="100" id="hsl-s">
+  <input type="range" min="0" step="0.1" max="100" id="hsl-l">
+  <div id="sample"></div>
+</section>
+
+ <script src="ColorPicker.js"></script>
+
+<script type="text/javascript" src='VolumeBlock.js'></script>
+
+
+
+</body>
+</html>
+
+ -->
