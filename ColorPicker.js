@@ -61,6 +61,7 @@ picker.sliders.forEach(function(p, i) {
 });
 
 function handleSliderChange() {
+  console.log ("bing")
   var sliderType = this.id.split("hsl-")[1];
   if(sliderType === "h") {
     colors.h = this.value;
@@ -102,6 +103,7 @@ function updateColor(color) {
   picker.sample.innerHTML = getColorValuesHTML();
 }
 function getColorValuesHTML() {
+  console.log ("bang")
   return [
     "<div class=\"" + colors.textColor() + "\">",
     [
